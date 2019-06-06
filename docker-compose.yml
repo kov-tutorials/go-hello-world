@@ -1,0 +1,9 @@
+version: '3.5'
+services:
+  my-go-hello-world:
+    container_name: my-go-hello-world
+    build: .
+    command: go run hello-world.go
+    volumes:
+      - ./:/go/src/app
+    working_dir: /go/src/app
